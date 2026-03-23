@@ -29,6 +29,8 @@ public:
         });
 
         if (is_closed_ && data_.has_value()) {
+            data_.reset();
+            is_busy_ = false;
             throw std::runtime_error("Channel is closed and value was not received");
         }
 
