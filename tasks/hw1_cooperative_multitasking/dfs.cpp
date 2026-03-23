@@ -89,11 +89,12 @@ Generator<int> dfs(int start_node, const std::vector<std::vector<int>>& graph) {
 
 int main() {
     std::vector<std::vector<int>> graph = {
-        {1, 2},
-        {0, 3, 4},
-        {0},
-        {1},
-        {1}
+    {1},
+    {2, 1},
+    {3, 2, 1},
+    {4, 3, 2, 1},
+    {5, 4, 3, 2, 1},
+    {4, 3, 2, 1, 0}
     };
 
     std::cout << "[Main] Starting cooperative DFS\n";
